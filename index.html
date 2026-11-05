@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="styles/base.css">
 
-    <script src="getdates.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,99 +39,121 @@
 
     <main>
 
-        <h1>Emmanuel M. Koweh</h1>
+    <h1>Emmanuel M. Koweh</h1>
 
-        <div class="content-container">
+    <div class="content-container">
 
-          
-            <section class="about-card">
+        <!-- First Card -->
+        <section class="card about-card">
 
-                <h2>About Me</h2>
+            <h2>About Me</h2>
 
-                <div class="about-content">
+            <div class="about-content">
 
-                    <p>
-                        My name is Emmanuel M. Koweh. I am a lecturer, librarian, researcher, and graphic designer from Nigeria.Am proudly a Latter-Day Saint. I have a background in Library and Information Science and a strong interest in technology, web development, research, and information management. I enjoy learning new skills, exploring innovative ideas, and using technology to solve problems. I am passionate about education, entrepreneurship, and continuous personal and professional development..
-                    </p>
+                <p>
+                    My name is Emmanuel M. Koweh. I am a lecturer, librarian,
+                    researcher, and graphic designer from Nigeria. I am proudly
+                    a Latter-day Saint. I have a background in Library and
+                    Information Science and a strong interest in technology,
+                    web development, research, and information management.
+                    I enjoy learning new skills, exploring innovative ideas,
+                    and using technology to solve problems. I am passionate
+                    about education, entrepreneurship, and continuous personal
+                    and professional development.
+                </p>
 
-                    <img src="images/myprofilepic.jpeg" alt="Portrait of Emmanuel M. Koweh">
+                <img src="images/myprofilepic.jpeg"
+                     alt="Portrait of Emmanuel M. Koweh">
 
-                </div>
+            </div>
 
-                <h3>Abuja, Nigeria</h3>
+            <h3>Abuja, Nigeria</h3>
 
-                <hr>
+            <hr>
 
-                <div class="country-content">
+            <div class="country-content">
 
-                    <figure>
-                        <div class="Nigerian-flag">
-                            <div class="green"></div>
-                            <div class="white"></div>.
-                             <div class="green"></div>
-                        </div>
+                <figure>
 
-                        <figcaption>
-                           <img src="images/officialflagofnigeria.png" alt="Portrait of Emmanuel M. Koweh">
-                        </figcaption>
-                    </figure>
+                    <div class="Nigerian-flag">
+                        <div class="green"></div>
+                        <div class="white"></div>
+                        <div class="green"></div>
+                    </div>
 
-                    <p>
-                        Abuja is the capital city of Nigeria, located in the Federal Capital Territory (FCT). It became Nigeria's capital in 1991, replacing Lagos. Abuja is known for its beautiful landscapes, modern buildings, well-planned roads, and landmarks such as Aso Rock, the National Mosque, and the National Christian Centre. It is an important centre for government, business, education, and tourism in Nigeria.
-                    </p>
+                    <figcaption>
+                        <img src="images/officialflagofnigeria.png"
+                             alt="Flag of Nigeria">
+                    </figcaption>
 
-                </div>
+                </figure>
 
-            </section>
+                <p>
+                    Abuja is the capital city of Nigeria, located in the
+                    Federal Capital Territory (FCT). It became Nigeria's
+                    capital in 1991, replacing Lagos. Abuja is known for
+                    its beautiful landscapes, modern buildings, well-planned
+                    roads, and landmarks such as Aso Rock, the National Mosque,
+                    and the National Christian Centre. It is an important
+                    centre for government, business, education, and tourism
+                    in Nigeria.
+                </p>
+
+            </div>
+
+        </section>
 
 
-          
-            <section class="resources-card">
+        <!-- Second Card -->
+        <section class="card resources-card">
 
-                <h2>Web Dev Resources</h2>
+            <h2>Web Dev Resources</h2>
 
-                <ul>
-                    <li>
-                        <a href="https://dev.to/">Dev.to Community</a>
-                    </li>
+            <ul>
 
-                    <li>
-                        <a href="https://www.smashingmagazine.com/">
-                            Smashing Magazine
-                        </a>
-                    </li>
+                <li>
+                    <a href="https://dev.to/">Dev.to Community</a>
+                </li>
 
-                    <li>
-                        <a href="https://css-tricks.com/">CSS Tricks</a>
-                    </li>
+                <li>
+                    <a href="https://www.smashingmagazine.com/">
+                        Smashing Magazine
+                    </a>
+                </li>
 
-                    <li>
-                        <a href="https://www.w3schools.com/">W3 Schools</a>
-                    </li>
+                <li>
+                    <a href="https://css-tricks.com/">CSS Tricks</a>
+                </li>
 
-                    <li>
-                        <a href="https://www.udemy.com/">Udemy</a>
-                    </li>
+                <li>
+                    <a href="https://www.w3schools.com/">W3 Schools</a>
+                </li>
 
-                    <li>
-                        <a href="https://picsum.photos/">
-                            Emma Picsum Image Placeholder
-                        </a>
-                    </li>
-                </ul>
+                <li>
+                    <a href="https://www.udemy.com/">Udemy</a>
+                </li>
 
-            </section>
+                <li>
+                    <a href="https://picsum.photos/">
+                        Emma Picsum Image Placeholder
+                    </a>
+                </li>
 
-        </div>
+            </ul>
 
-    </main>
+        </section>
+
+    </div>
+
+</main>
 
 <footer>
     <p>©2026 🌺 <span>Emmanuel Musa Koweh</span> 🌺 Abuja Nigeria</p>
+
     <p>Last modified: <span id="lastModified"></span></p>
 </footer>
+
+<script src="scripts/getdates.js" defer></script>
+
 </body>
-<script>
-    document.getElementById("lastModified").textContent = document.lastModified;
-</script>
 </html>
