@@ -1,0 +1,31 @@
+@media (min-width: 900px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 2.5rem;
+  }
+
+  nav a {
+    padding: 0.44rem 4rem;
+    border-top: none;
+  }
+
+  main {
+    max-width: 1200px;
+    padding: 1.5rem 4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
