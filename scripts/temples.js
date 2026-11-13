@@ -1,18 +1,18 @@
+// temples.js - hamburger menu and footer dates
+
+const menuButton = document.querySelector("#menu");
+const siteNav = document.querySelector("#site-nav");
 const yearSpan = document.querySelector("#currentyear");
 const modifiedSpan = document.querySelector("#lastModified");
 
+// Show or hide the navigation on small screens
+menuButton.addEventListener("click", () => {
+  const isOpen = siteNav.classList.toggle("open");
+  menuButton.textContent = isOpen ? "\u2716" : "\u2630";
+  menuButton.setAttribute("aria-expanded", isOpen);
+});
+
+// Footer: current year and the date this page was last modified
 const today = new Date();
 yearSpan.textContent = today.getFullYear();
 modifiedSpan.textContent = document.lastModified;
-const menuButton = document.querySelector("#menu");
-const navigation = document.querySelector("#primary-nav");
-
-menuButton.addEventListener("click", () => {
-  const isOpen = navigation.classList.toggle("open");
-
-
-  menuButton.innerHTML = isOpen ? "&#10006;" : "&#9776;";
-
- 
-  menuButton.setAttribute("aria-expanded", isOpen);
-});
