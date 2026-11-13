@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Temple Album | WDD 131</title>
-  <meta name="description" content="A responsive picture album of temples from around the world, including San Diego, Rome, Accra, Paris, Tokyo and Sydney.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Emmanuel Koweh Musa">
+  <meta name="description" content="A responsive picture album of temples from around the world, including San Diego, Rome, Accra, Paris, Tokyo and Sydney.">
+  <title>Temple Album | WDD 131</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/temples.css">
- <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 600px)">
+  <link rel="stylesheet" href="styles/temples-large.css">
 
   <script src="scripts/temples.js" defer></script>
 </head>
@@ -20,61 +20,70 @@
 
   <header>
     <p class="site-title">Temple Album</p>
-    <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">&#9776;</button>
-    <nav id="primary-nav" aria-label="Main">
-      <a href="#">Home</a>
-      <a href="#">Old</a>
-      <a href="#">New</a>
-      <a href="#">Large</a>
-      <a href="#">Small</a>
-    </nav>
+    <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
   </header>
+
+  <nav id="site-nav" aria-label="Main navigation">
+    <a href="#">Home</a>
+    <a href="#">Old</a>
+    <a href="#">New</a>
+    <a href="#">Large</a>
+    <a href="#">Small</a>
+  </nav>
 
   <main>
     <h1>Home</h1>
 
-    <div class="gallery">
+    <section class="gallery">
       <figure>
         <img src="images/sandiegocalifoniatemple.jpg" alt="San Diego California Temple with tall white spires" width="400" height="250" loading="lazy">
         <figcaption>San Diego California</figcaption>
       </figure>
+
       <figure>
         <img src="images/italyrometemple.jpg" alt="Rome Italy Temple at dusk" width="400" height="250" loading="lazy">
         <figcaption>Rome Italy</figcaption>
       </figure>
+
       <figure>
         <img src="images/abanigeriantemple.jpg" alt="Aba Nigeria Temple surrounded by palm trees" width="400" height="250" loading="lazy">
         <figcaption>Aba Nigeria</figcaption>
       </figure>
+
       <figure>
         <img src="images/ghanaaccratemple.jpg" alt="Accra Ghana Temple under a blue sky" width="400" height="250" loading="lazy">
         <figcaption>Accra Ghana</figcaption>
       </figure>
+
       <figure>
         <img src="images/paristemple.jpg" alt="Paris France Temple" width="400" height="250" loading="lazy">
         <figcaption>Paris France</figcaption>
       </figure>
+
       <figure>
         <img src="images/templesaltlakecityutah.jpg" alt="Salt Lake City Utah Temple" width="400" height="250" loading="lazy">
         <figcaption>Salt Lake City Utah</figcaption>
       </figure>
+
       <figure>
         <img src="images/rexburgidaho.jpg" alt="Rexburg Idaho Temple" width="400" height="250" loading="lazy">
         <figcaption>Rexburg Idaho</figcaption>
       </figure>
+
       <figure>
         <img src="images/tokyojapantemple.jpg" alt="Tokyo Japan Temple" width="400" height="250" loading="lazy">
         <figcaption>Tokyo Japan</figcaption>
       </figure>
+
       <figure>
         <img src="images/templeinaustrala.jpg" alt="Sydney Australia Temple" width="400" height="250" loading="lazy">
         <figcaption>Sydney Australia</figcaption>
       </figure>
-    </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy;<span id="currentyear"></span> &#127963; Emmanuel Koweh Musa &#127963; Nigeria</p>
+    <p>&copy; <span id="currentyear"></span> &#127963; Emmanuel Koweh Musa &#127963; Nigeria</p>
     <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 
