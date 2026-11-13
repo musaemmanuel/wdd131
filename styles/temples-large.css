@@ -1,3 +1,5 @@
+/* temples-large.css - desktop styles (loads after temples.css) */
+
 @media (min-width: 900px) {
   header {
     padding: 1rem 2rem;
@@ -10,12 +12,12 @@
   nav {
     display: flex;
     flex-direction: row;
-    justify-content: right;
-    gap: 2.5rem;
+    justify-content: flex-end;
+    gap: 1rem;
   }
 
   nav a {
-    padding: 0.44rem 4rem;
+    padding: 0.5rem 1.5rem;
     border-top: none;
   }
 
