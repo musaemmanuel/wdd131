@@ -2,117 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Discover Abuja, Nigeria, including its location, climate, population, and geographical information.">
-
-    <meta name="author" content="Emmanuel Musa Koweh">
-
-    <title>Abuja, Nigeria | WDD 131 Place Assignment</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Emmanuel Koweh Musa">
+    <meta name="description" content="Quick facts and current weather for Nigeria, the most populous country in Africa.">
+    <title>Nigeria | WDD 131</title>
     <link rel="stylesheet" href="styles/place.css">
-
     <script src="scripts/place.js" defer></script>
 </head>
-
 <body>
-
     <header>
-        <h1>Abuja, Nigeria</h1>
+        <h1>Nigeria</h1>
     </header>
 
     <main>
+        <picture class="hero">
+            <source media="(min-width: 800px)" srcset="images/" type="image/webp">
+            <img src="images/abujagate-small.webp" alt="Aerial view of the Lagos skyline at sunset" width="640" height="960">
+        </picture>
 
-        <div class="hero">
+        <section class="data">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt>
+                <dd>923,768 sq km</dd>
+                <dt>Population:</dt>
+                <dd>223,804,632</dd>
+                <dt>Capital:</dt>
+                <dd>Abuja</dd>
+                <dt>Languages:</dt>
+                <dd>English, Hausa, Yoruba, Igbo</dd>
+                <dt>Currency:</dt>
+                <dd>Nigerian Naira</dd>
+                <dt>Time Zone:</dt>
+                <dd>UTC+1</dd>
+                <dt>Calling Code:</dt>
+                <dd>+234</dd>
+                <dt>Internet TLD:</dt>
+                <dd>.ng</dd>
+            </dl>
+        </section>
 
-            <picture>
-                <source
-                    srcset="images/abujagate.jpg" media="(min-width: 600px)">
-
-                <img
-                    src="images/abujagate.jpg"alt="Aerial view of Abuja, the capital city of Nigeria"
-                    width="1500"
-                    height="900">
-            </picture>
-
-            <section class="card data">
-                <h2>Data</h2>
-
-                <div class="info">
-                    <p><strong>Area:</strong></p>
-                    <p>1,769 km²</p>
-
-                    <p><strong>Population:</strong></p>
-                    <p>Approximately 3.8 million</p>
-
-                    <p><strong>Capital:</strong></p>
-                    <p>Abuja</p>
-
-                    <p><strong>Country:</strong></p>
-                    <p>Nigeria</p>
-
-                    <p><strong>Region:</strong></p>
-                    <p>Federal Capital Territory</p>
-
-                    <p><strong>Currency:</strong></p>
-                    <p>Nigerian Naira (₦)</p>
-
-                    <p><strong>Language:</strong></p>
-                    <p>English</p>
-
-                    <p><strong>Time Zone:</strong></p>
-                    <p>WAT (UTC+1)</p>
-
-                    <p><strong>Elevation:</strong></p>
-                    <p>840 metres</p>
-                </div>
-            </section>
-
-
-            <section class="card weather">
-
-                <h2>Weather</h2>
-
-                <div class="weather-icon">
-                    <img
-                        src="images/weather-icon.svg"
-                        alt="Weather icon">
-                </div>
-
-                <div class="info">
-
-                    <p><strong>Temperature:</strong></p>
-                    <p id="temperature">28 °C</p>
-
-                    <p><strong>Conditions:</strong></p>
-                    <p>Partly Cloudy</p>
-
-                    <p><strong>Wind:</strong></p>
-                    <p id="wind">12 km/h</p>
-
-                    <p><strong>Wind Chill:</strong></p>
-                    <p id="windchill">Calculating...</p>
-
-                </div>
-
-            </section>
-
-        </div>
-
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Partly cloudy" width="80" height="80" class="weather-icon">
+            <dl>
+                <dt>Temperature:</dt>
+                <dd><span id="temperature">32</span> °C</dd>
+                <dt>Conditions:</dt>
+                <dd>Partly Cloudy</dd>
+                <dt>Wind:</dt>
+                <dd><span id="wind-speed">8</span> km/h</dd>
+                <dt>Wind Chill:</dt>
+                <dd id="wind-chill">N/A</dd>
+            </dl>
+        </section>
     </main>
 
-
     <footer>
-
-        <p>
-            &copy; <span id="currentyear"></span>
-            🌺 Emmanuel Musa Koweh 🌺
-            Abuja, Nigeria
-        </p>
-
-        <p id="lastModified"></p>
-
+        <p>&copy;<span id="currentyear"></span> 🌍 Emmanuel Koweh Musa 🌍 Nigeria</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-
 </body>
 </html>
