@@ -1,45 +1,55 @@
-// ========================================
-// NIGERIA PLACE PAGE - WDD 131
-// Author: Emmanuel Koweh Musa
-// ========================================
+// GET CURRENT YEAR
 
-// Weather information
-const temperature = 32;
-const windSpeed = 8;
+const currentYear = new Date().getFullYear();
 
-// Wind chill calculation using the metric formula
-function calculateWindChill(temp, speed) {
-    return (
-        13.12 +
-        0.6215 * temp -
-        11.37 * Math.pow(speed, 0.16) +
-        0.3965 * temp * Math.pow(speed, 0.16)
-    );
-}
-
-// Check wind chill eligibility
-let windChill = "N/A";
-
-if (temperature <= 10 && windSpeed > 4.8) {
-    windChill = `${calculateWindChill(temperature, windSpeed).toFixed(1)} °C`;
-}
-
-// Display weather information
-document.querySelector("#temperature").textContent = temperature;
-
-document.querySelector("#wind-speed").textContent = windSpeed;
-
-document.querySelector("#wind-chill").textContent = windChill;
+document.querySelector("#currentyear").textContent = currentYear;
 
 
-// ========================================
-// FOOTER INFORMATION
-// ========================================
+// GET LAST MODIFIED DATE
 
-// Display current year
-document.querySelector("#currentyear").textContent =
-    new Date().getFullYear();
+const lastModified = document.lastModified;
 
-// Display last modified date
 document.querySelector("#lastModified").textContent =
-    document.lastModified;
+    `Last Modification: ${lastModified}`;
+
+
+// WEATHER DATA
+
+const temperature = 28;
+
+const windSpeed = 12;
+
+
+// WIND CHILL CALCULATION
+
+function calculateWindChill(temp, wind) {
+
+    if (temp <= 10 && wind > 4.8) {
+
+        const windChill =
+            13.12 +
+            (0.6215 * temp) -
+            (11.37 * Math.pow(wind, 0.16)) +
+            (0.3965 * temp * Math.pow(wind, 0.16));
+
+        return `${windChill.toFixed(1)} °C`;
+
+    } else {
+
+        return "N/A";
+
+    }
+
+}
+
+
+// DISPLAY WEATHER INFORMATION
+
+document.querySelector("#temperature").textContent =
+    `${temperature} °C`;
+
+document.querySelector("#wind").textContent =
+    `${windSpeed} km/h`;
+
+document.querySelector("#windchill").textContent =
+    calculateWindChill(temperature, windSpeed);
