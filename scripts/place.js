@@ -1,55 +1,22 @@
-// GET CURRENT YEAR
+// Static weather values (match what is shown in the Weather section)
+const temperature = 32; // °C
+const windSpeed = 8; // km/h
 
-const currentYear = new Date().getFullYear();
-
-document.querySelector("#currentyear").textContent = currentYear;
-
-
-// GET LAST MODIFIED DATE
-
-const lastModified = document.lastModified;
-
-document.querySelector("#lastModified").textContent =
-    `Last Modification: ${lastModified}`;
-
-
-// WEATHER DATA
-
-const temperature = 28;
-
-const windSpeed = 12;
-
-
-// WIND CHILL CALCULATION
-
-function calculateWindChill(temp, wind) {
-
-    if (temp <= 10 && wind > 4.8) {
-
-        const windChill =
-            13.12 +
-            (0.6215 * temp) -
-            (11.37 * Math.pow(wind, 0.16)) +
-            (0.3965 * temp * Math.pow(wind, 0.16));
-
-        return `${windChill.toFixed(1)} °C`;
-
-    } else {
-
-        return "N/A";
-
-    }
-
+// Metric wind chill formula (°C and km/h), one-line return
+function calculateWindChill(temp, speed) {
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(speed, 0.16) + 0.3965 * temp * Math.pow(speed, 0.16);
 }
 
+// Only calculate when conditions are viable: temp <= 10 °C and wind > 4.8 km/h
+let windChill = "N/A";
+if (temperature <= 10 && windSpeed > 4.8) {
+    windChill = `${calculateWindChill(temperature, windSpeed).toFixed(1)} °C`;
+}
 
-// DISPLAY WEATHER INFORMATION
+document.querySelector("#temperature").textContent = temperature;
+document.querySelector("#wind-speed").textContent = windSpeed;
+document.querySelector("#wind-chill").textContent = windChill;
 
-document.querySelector("#temperature").textContent =
-    `${temperature} °C`;
-
-document.querySelector("#wind").textContent =
-    `${windSpeed} km/h`;
-
-document.querySelector("#windchill").textContent =
-    calculateWindChill(temperature, windSpeed);
+// Footer: current year and last modified date
+document.querySelector("#currentyear").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
