@@ -3,7 +3,7 @@
     --green-dark: #00502d;
     --white: #ffffff;
     --ink: #1a1a1a;
-    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-bg: rgba(255, 255, 255, 0.92);
     --font-main: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -19,7 +19,8 @@ body {
     line-height: 1.5;
 }
 
-/* ---------- Mobile first ---------- */
+/* HEADER */
+
 header {
     background-color: var(--green);
     color: var(--white);
@@ -33,12 +34,20 @@ h1 {
     font-size: 2.2rem;
 }
 
-.hero,
+/* HERO IMAGE */
+
+.hero {
+    display: block;
+    width: 100%;
+}
+
 .hero img {
     display: block;
     width: 100%;
     height: auto;
 }
+
+/* MAIN CONTENT */
 
 section {
     padding: 1.5rem 1rem;
@@ -50,9 +59,7 @@ section h2 {
     font-size: 1.8rem;
 }
 
-.weather {
-    border-top: 2px solid var(--green);
-}
+/* DATA AND WEATHER */
 
 dl {
     display: grid;
@@ -72,10 +79,18 @@ dd {
     text-align: left;
 }
 
+/* WEATHER */
+
+.weather {
+    border-top: 2px solid var(--green);
+}
+
 .weather-icon {
     display: block;
     margin: 0 auto 1rem;
 }
+
+/* FOOTER */
 
 footer {
     background-color: var(--green);
@@ -88,11 +103,14 @@ footer p {
     margin: 0.25rem 0;
 }
 
-/* ---------- Wider view ---------- */
-@media (min-width: 600px) {
+/* TABLET AND DESKTOP VIEW */
+
+@media (min-width: 700px) {
+
     main {
         position: relative;
         height: 560px;
+        overflow: hidden;
     }
 
     .hero {
@@ -100,16 +118,18 @@ footer p {
     }
 
     .hero img {
+        width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
     }
 
     section {
         position: absolute;
-        width: 18rem;
+        width: min(18rem, 42%);
         padding: 0 0 1rem;
         background-color: var(--card-bg);
-        border-top: none;
+        border: none;
     }
 
     section h2 {
@@ -137,12 +157,34 @@ footer p {
         padding: 0 0.75rem;
     }
 
-    /* Weather icon after the heading (large view) uses a pseudo-element */
+    /* Weather icon for wider screens */
+
     .weather h2::after {
         content: " ⛅";
     }
 
     .weather-icon {
         display: none;
+    }
+}
+
+/* LARGE DESKTOP VIEW */
+
+@media (min-width: 1000px) {
+
+    main {
+        height: 650px;
+    }
+
+    section {
+        width: 20rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    dl {
+        font-size: 1rem;
     }
 }
