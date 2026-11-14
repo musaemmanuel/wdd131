@@ -1,0 +1,148 @@
+:root {
+    --green: #00703f;
+    --green-dark: #00502d;
+    --white: #ffffff;
+    --ink: #1a1a1a;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --font-main: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    color: var(--ink);
+    background-color: var(--white);
+    line-height: 1.5;
+}
+
+/* ---------- Mobile first ---------- */
+header {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem 1rem;
+    border-bottom: 0.5rem solid var(--green-dark);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.hero,
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+section h2 {
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+}
+
+.weather {
+    border-top: 2px solid var(--green);
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 1rem;
+    max-width: 24rem;
+    margin: 0 auto;
+}
+
+dt {
+    font-weight: 700;
+    text-align: right;
+}
+
+dd {
+    margin: 0;
+    text-align: left;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+footer {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* ---------- Wider view ---------- */
+@media (min-width: 600px) {
+    main {
+        position: relative;
+        height: 560px;
+    }
+
+    .hero {
+        height: 100%;
+    }
+
+    .hero img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    section {
+        position: absolute;
+        width: 18rem;
+        padding: 0 0 1rem;
+        background-color: var(--card-bg);
+        border-top: none;
+    }
+
+    section h2 {
+        margin: 0 0 0.75rem;
+        padding: 0.4rem 1rem;
+        background-color: var(--green);
+        color: var(--white);
+        font-size: 1.3rem;
+        text-align: left;
+    }
+
+    .data {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .weather {
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    dl {
+        font-size: 0.9rem;
+        max-width: none;
+        padding: 0 0.75rem;
+    }
+
+    /* Weather icon after the heading (large view) uses a pseudo-element */
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+    .weather-icon {
+        display: none;
+    }
+}
