@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse temples and filter them by age and size.">
+  <meta name="author" content="Emmanuel Koweh Musa">
+  <title>Temples | WDD 131</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="#" data-filter="home" class="active">Home</a></li>
+      <li><a href="#" data-filter="old">Old</a></li>
+      <li><a href="#" data-filter="new">New</a></li>
+      <li><a href="#" data-filter="large">Large</a></li>
+      <li><a href="#" data-filter="small">Small</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 id="page-title">Home</h2>
+    <section id="temple-cards" class="gallery" aria-live="polite">
+      <!-- Temple cards are created by JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🌍 Emmanuel Koweh Musa 🌍 Nigeria</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
