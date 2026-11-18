@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website planning document for the Koweh Integrated Services Ltd ICT Centre website: name, purpose, scenarios, colour schema, typography and wireframes.">
+    <meta name="author" content="Emmanuel Koweh Musa">
+    <title>Koweh ICT Centre | Website Planning Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <script src="scripts/siteplan.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/koweh-logo.webp" alt="Koweh Integrated Services Ltd ICT Centre round logo showing a desktop computer" width="120" height="120">
+        <div>
+            <p class="eyebrow">Website Planning Document</p>
+            <h1>Koweh Integrated Services Ltd ICT Centre</h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Koweh Integrated Services Ltd ICT Centre</strong> is the registered name of the business the site represents (RC: 7490880). I chose it so that customers who already know the shop, its flyers and its logo recognise the website straight away. The round logo above will appear in the header of every page.</p>
+            <p>Possible domain (availability not checked): <code>kowehict.com.ng</code></p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The site is an information hub for people in Abuja and Nasarawa State who need printing, design, secretarial or computer training services. It shows what the centre offers, lists the training courses, gives the head office and branch locations, and includes an enquiry form where a visitor can request a service or register for a course.</p>
+            <h3>Planned Pages</h3>
+            <ul>
+                <li><strong>Home:</strong> welcome message, short introduction, service highlights and locations.</li>
+                <li><strong>Services:</strong> graphic design and secretarial service lists with a filter.</li>
+                <li><strong>Training:</strong> computer, design and web development courses.</li>
+                <li><strong>Contact:</strong> enquiry form, addresses and phone numbers.</li>
+                <li><strong>References:</strong> sources for any outside images or text, linked in the footer.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>Do you design and print wedding invitation cards and banners, and how do I place an order?</li>
+                <li>Which computer courses are available, and can I get a certificate at the end?</li>
+                <li>Can you help me with FGN online verification, Remita generation or online registration?</li>
+                <li>Where is your office, and what phone number can I call?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p>The colours come from the green ring of the logo and the dark green and red of the business flyers.</p>
+            <ul class="swatches">
+                <li>
+                    <div class="swatch swatch-green"></div>
+                    <p><strong>#11524A</strong></p>
+                    <p>Header, footer, headings</p>
+                </li>
+                <li>
+                    <div class="swatch swatch-cream"></div>
+                    <p><strong>#F6F3EA</strong></p>
+                    <p>Page background</p>
+                </li>
+                <li>
+                    <div class="swatch swatch-red"></div>
+                    <p><strong>#B3202A</strong></p>
+                    <p>Buttons, links, accents</p>
+                </li>
+                <li>
+                    <div class="swatch swatch-ink"></div>
+                    <p><strong>#1F2A27</strong></p>
+                    <p>Paragraph text</p>
+                </li>
+                <li>
+                    <div class="swatch swatch-mint"></div>
+                    <p><strong>#DCEBE6</strong></p>
+                    <p>Cards and form backgrounds</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p>Two fonts, both from Google Fonts, with safe fallbacks.</p>
+            <div class="font-samples">
+                <div>
+                    <p class="sample-heading">Poppins Bold</p>
+                    <p>Used for the site name, page headings and buttons. Its round, bold letters match the circular logo.</p>
+                </div>
+                <div>
+                    <p class="sample-body">Open Sans Regular</p>
+                    <p>Used for paragraphs, lists, form labels and navigation because it stays easy to read on small phone screens.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <p>Home page layout in the mobile view and the wider desktop view.</p>
+            <div class="wireframes">
+                <figure>
+                    <svg viewBox="0 0 220 470" role="img" aria-labelledby="mobile-title mobile-desc">
+                        <title id="mobile-title">Mobile home page wireframe</title>
+                        <desc id="mobile-desc">One column layout: header with logo and menu button, hero with call to action, three stacked service cards, a training band, locations and a footer.</desc>
+                        <rect class="wf-frame" x="5" y="5" width="210" height="460" rx="10"/>
+                        <rect class="wf-bar" x="5" y="5" width="210" height="50" rx="10"/>
+                        <circle class="wf-light" cx="35" cy="30" r="16"/>
+                        <rect class="wf-light" x="170" y="20" width="30" height="4"/>
+                        <rect class="wf-light" x="170" y="28" width="30" height="4"/>
+                        <rect class="wf-light" x="170" y="36" width="30" height="4"/>
+                        <rect class="wf-block" x="15" y="65" width="190" height="80"/>
+                        <text class="wf-text" x="110" y="95" text-anchor="middle">Welcome headline</text>
+                        <rect class="wf-accent" x="70" y="108" width="80" height="22" rx="4"/>
+                        <text class="wf-text" x="110" y="164" text-anchor="middle">Our Services</text>
+                        <rect class="wf-block" x="15" y="172" width="190" height="45"/>
+                        <rect class="wf-block" x="15" y="224" width="190" height="45"/>
+                        <rect class="wf-block" x="15" y="276" width="190" height="45"/>
+                        <rect class="wf-block" x="15" y="332" width="190" height="45"/>
+                        <text class="wf-text" x="110" y="359" text-anchor="middle">Training highlight</text>
+                        <rect class="wf-block" x="15" y="385" width="190" height="35"/>
+                        <text class="wf-text" x="110" y="407" text-anchor="middle">Locations</text>
+                        <rect class="wf-bar" x="5" y="430" width="210" height="35" rx="10"/>
+                    </svg>
+                    <figcaption>Mobile view</figcaption>
+                </figure>
+
+                <figure>
+                    <svg viewBox="0 0 480 360" role="img" aria-labelledby="desktop-title desktop-desc">
+                        <title id="desktop-title">Desktop home page wireframe</title>
+                        <desc id="desktop-desc">Wide layout: header with logo and navigation links, hero with text beside an image, a row of three service cards, training and locations side by side, and a footer.</desc>
+                        <rect class="wf-frame" x="5" y="5" width="470" height="350" rx="10"/>
+                        <rect class="wf-bar" x="5" y="5" width="470" height="45" rx="10"/>
+                        <circle class="wf-light" cx="35" cy="28" r="15"/>
+                        <rect class="wf-light" x="260" y="25" width="40" height="5"/>
+                        <rect class="wf-light" x="315" y="25" width="40" height="5"/>
+                        <rect class="wf-light" x="370" y="25" width="40" height="5"/>
+                        <rect class="wf-light" x="425" y="25" width="35" height="5"/>
+                        <rect class="wf-block" x="15" y="60" width="450" height="100"/>
+                        <text class="wf-text" x="125" y="100" text-anchor="middle">Welcome headline</text>
+                        <rect class="wf-accent" x="85" y="115" width="80" height="22" rx="4"/>
+                        <rect class="wf-frame" x="270" y="72" width="180" height="76"/>
+                        <text class="wf-text" x="360" y="114" text-anchor="middle">Image</text>
+                        <text class="wf-text" x="240" y="182" text-anchor="middle">Our Services</text>
+                        <rect class="wf-block" x="15" y="192" width="142" height="60"/>
+                        <rect class="wf-block" x="169" y="192" width="142" height="60"/>
+                        <rect class="wf-block" x="323" y="192" width="142" height="60"/>
+                        <rect class="wf-block" x="15" y="262" width="220" height="50"/>
+                        <text class="wf-text" x="125" y="291" text-anchor="middle">Training highlight</text>
+                        <rect class="wf-block" x="245" y="262" width="220" height="50"/>
+                        <text class="wf-text" x="355" y="291" text-anchor="middle">Locations</text>
+                        <rect class="wf-bar" x="5" y="322" width="470" height="33" rx="10"/>
+                    </svg>
+                    <figcaption>Desktop view</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+   <footer>
+    <p>&copy; <span id="currentyear"></span> &#127963; Koweh ICT Centre &#127963; Abuja-Nigeria</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer
+</body>
+</html>
