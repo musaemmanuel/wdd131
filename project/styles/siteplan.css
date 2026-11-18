@@ -1,0 +1,268 @@
+:root {
+    --green: #11524a;
+    --cream: #f6f3ea;
+    --red: #b3202a;
+    --ink: #1f2a27;
+    --mint: #dcebe6;
+    --line: #b7cbc4;
+    --white: #ffffff;
+    --heading-font: "Poppins", "Trebuchet MS", sans-serif;
+    --body-font: "Open Sans", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background-color: var(--cream);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1.25rem;
+    background-color: var(--green);
+    color: var(--white);
+}
+
+header img {
+    flex-shrink: 0;
+    width: 3.75rem;
+    height: 3.75rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    background-color: var(--white);
+}
+
+header h1 {
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 1.1rem;
+    line-height: 1.25;
+}
+
+.eyebrow {
+    margin: 0;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mint);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+h2,
+h3 {
+    font-family: var(--heading-font);
+    color: var(--green);
+}
+
+h2 {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.25rem;
+    font-size: 1.25rem;
+    border-bottom: 3px solid var(--red);
+}
+
+h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+code {
+    padding: 0.1rem 0.4rem;
+    background-color: var(--mint);
+    border-radius: 0.25rem;
+}
+
+.swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.swatches li {
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+}
+
+.swatches p {
+    margin: 0.3rem 0 0;
+    padding: 0 0.6rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.swatches p:last-child {
+    padding-bottom: 0.6rem;
+}
+
+.swatch {
+    height: 3.5rem;
+}
+
+.swatch-green {
+    background-color: var(--green);
+}
+
+.swatch-cream {
+    background-color: var(--cream);
+}
+
+.swatch-red {
+    background-color: var(--red);
+}
+
+.swatch-ink {
+    background-color: var(--ink);
+}
+
+.swatch-mint {
+    background-color: var(--mint);
+}
+
+.font-samples {
+    display: grid;
+    gap: 1rem;
+}
+
+.font-samples div {
+    padding: 1rem;
+    background-color: var(--mint);
+    border-radius: 0.5rem;
+}
+
+.sample-heading {
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.sample-body {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--green);
+}
+
+.wireframes {
+    display: grid;
+    gap: 1.5rem;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure svg {
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.wf-frame {
+    fill: var(--white);
+    stroke: var(--ink);
+    stroke-width: 2;
+}
+
+.wf-bar {
+    fill: var(--green);
+}
+
+.wf-light {
+    fill: var(--white);
+}
+
+.wf-block {
+    fill: var(--mint);
+    stroke: var(--green);
+    stroke-width: 1;
+}
+
+.wf-accent {
+    fill: var(--red);
+}
+
+.wf-text {
+    font-family: var(--body-font);
+    font-size: 11px;
+    fill: var(--ink);
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--green);
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 700px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header img {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .font-samples {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wireframes {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+
+    figure svg {
+        max-width: none;
+    }
+}
